@@ -1,0 +1,129 @@
+:root {
+    --mainColorB: #000060;
+    --mainColorO: #e36c09
+}
+
+::selection { 
+    background-color: var(--mainColorB)
+}
+* {
+    transition: .25s all ease-in-out
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Cairo, Arial, 'Times New Roman', Times, serif
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0
+}
+
+.landing {
+    background-image: url(../assets/landing.jpg);
+    height: calc(100vh - 60px);
+    background-size: cover;
+}
+
+.overlay {
+    background-color: #000000ad;
+    height: 100%
+}
+
+.landing, .landing .overlay {
+    width: 100%
+}
+
+.landing .overlay nav.navbar {
+    direction: rtl;
+    padding-top: 0;
+    background-color: transparent !important;
+}
+
+.navbar-light .navbar-brand {
+    color: rgba(0,0,0,.9);
+    padding: 15px 15px 25px;
+    background-color: #fff;
+    border-radius: 0 0 130px 130px;
+}
+
+.landing .overlay nav.navbar a.navbar-brand img {
+    width: 70px;
+}
+
+.landing .overlay nav.navbar ul li.nav-item {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 30px;
+}
+
+div#navbarNav { justify-content: end }
+
+.landing .overlay nav ul li a {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.landing .overlay nav.navbar ul li.nav-item a {
+    color: #fff
+}
+
+.landing .overlay nav.navbar ul li.active a {
+    color: var(--mainColorO);
+    padding-right: 0;
+    padding-left: 0;
+    border-bottom: 2px solid var(--mainColorO);
+}
+
+.landing .overlay nav.navbar ul li.nav-item a:hover {
+    color: var(--mainColorO);
+    border-bottom: 2px solid var(--mainColorO) 
+}
+
+.info {
+    text-align: right;
+    color: #fff;
+    margin-top: calc((100vh - 170px) / 4);
+}
+
+.info h2, .info h5, .info small {
+    margin-bottom: 12px;
+}
+
+.info h5 { color: var(--mainColorO) }
+
+.info small { display: block }
+
+.info button.btn {
+    padding: 12px 48px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 2px #00000069;
+}
+
+.info button:hover {
+    background-color: #00003a !important
+}
+
+.info button a {
+    color: #fff;
+    text-decoration: none
+}
+
+.sideImg img {
+    position: absolute;
+    bottom: -135px;
+    width: 35%;
+    left: 0;
+    z-index: 99;
+}
+
+.shape {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    background: var(--mainColorB);
+}
