@@ -5,7 +5,8 @@
 }
 
 ::selection { 
-    background-color: var(--mainColorB)
+    background-color: var(--mainColorB);
+    color: #fff
 }
 
 * {
@@ -236,7 +237,19 @@ a.carousel-control-next {
     background-image: url(../assets/hexaPattern.jpg);
     background-size: cover;
     text-align: right;
-    padding: 3rem 0;
+    padding: 3rem 0 9rem;
+    position: relative
+}
+
+.row.vision::before {
+    content: '';
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    background-color: #fff;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    position: absolute;
 }
 
 .vision .cust {
@@ -289,8 +302,346 @@ a.carousel-control-next {
 }
 
 /* Slider section */
-.slick-center {
-    color: red !important;
+.slick-list.draggable { margin-top: -6rem }
+
+.slick-list.draggable::before {
+    content: '';
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--mainColorB);
+    position: absolute;
 }
 
-/* .center { color: var(--mainColorO) } */
+.slick-track {
+    display: flex;
+    align-items: end
+}
+
+button.slick-next.slick-arrow,
+button.slick-prev.slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    font-size: 0;
+    border: 0;
+    width: 60px;
+    height: 30px;
+}
+
+button.slick-next.slick-arrow {
+    right: 29%;
+    border-radius: 0 50px 50px 0;
+    background-color: var(--mainColorO);
+}
+
+button.slick-prev.slick-arrow {
+    left: 29%;
+    border-radius: 50px 0 0 50px;
+    background-color: var(--mainColorO);
+}
+
+.center div { background-size: cover }
+
+.center .a, .center .b, .center .c, .center .d, .center .e, .center .f {
+    background-image: url(../assets/landing.jpg);
+    height: 400px;
+    width: 400px;
+    margin: 0 10px
+}
+.slick-center {
+    width: 450px !important;
+    height: 450px !important;
+    /* margin: 0 10px; */
+}
+
+button.slick-prev.slick-arrow::before{
+    content: '';
+    border: 5px solid #fff;
+    position: absolute;
+    top: 10px;
+    left: 20%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(-45deg);
+}
+
+button.slick-prev.slick-arrow::after {
+    border-radius: 10px;
+    content: '';
+    width: 30px;
+    height: 4px;
+    position: absolute;
+    left: 27%;
+    background-color: #fff;
+    top: 13px;
+}
+
+button.slick-prev.slick-arrow::before {
+    content: '';
+    border: 5px solid #fff;
+    position: absolute;
+    top: 10px;
+    left: 20%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(-45deg);
+}
+
+button.slick-next.slick-arrow::after {
+    border-radius: 10px;
+    content: '';
+    width: 30px;
+    height: 4px;
+    position: absolute;
+    right: 27%;
+    background-color: #fff;
+    top: 13px;
+}
+
+button.slick-next.slick-arrow::before {
+    content: '';
+    border: 5px solid #fff;
+    position: absolute;
+    right: 12px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    transform: rotate(-45deg);
+    width: 0;
+    top: 10px;
+}
+
+/* Testemonials section */
+.testemonials {
+    padding: 9rem 0 3rem;
+    background-color: var(--mainColorB);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,96,1) 30%);
+    margin-top: -9rem;
+}
+.testemonials .carousel-inner{
+    overflow: hidden
+}
+
+.testemonials a.carousel-control-next, .testemonials a.carousel-control-prev { margin-top: 6rem }
+
+.testemonials i.fas.fa-angle-left, .testemonials i.fas.fa-angle-right {
+    width: 30px;
+    height: 30px;
+    background: var(--mainColorO);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.testemonials i.fas.fa-angle-right {
+    background: gray;
+}
+
+.testemonials h2 {
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-size: 3rem;
+}
+
+.testemonials p, .testemonials h5 {
+    color: #fff;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.testemonials h5 { font-weight: 600 }
+
+/* Structure org section */
+.structure {
+    padding: 3rem 0;
+    text-align: center;
+    background-image: url('../assets/hexaPattern.jpg');
+    background-size: cover;
+    position: relative;
+    z-index: -2;
+}
+
+.structure::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.397);
+    background: linear-gradient(334deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);
+}
+
+.structure .icon {
+    width: 110px;
+    height: 110px;
+    background-color: var(--mainColorO);
+    background: linear-gradient(180deg, var(--mainColorO), #ffa356);
+    border-radius: 50%;
+    box-shadow: 0 0 5px 2px #cdcdcd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 0
+}
+
+.structure .icon.part {
+    background-color: #aaa;
+    background: linear-gradient(180deg, #aaa, #aaa);
+
+}
+
+.structure .icon img {
+    width: 60%
+}
+
+.structure .icon .span {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    background-color: #222;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.structure h5 {
+    font-weight: 600;
+    color: var(--mainColorB);
+    margin: .7rem 0 1rem
+}
+
+.structure .bot {
+    margin-top: 4rem
+}
+
+.structure .icon.bot span { top: 3rem }
+
+.icon.bot::before, .icon.tawg::before {
+    content: '';
+    width: 116%;
+    height: 251px;
+    border: 8px dashed var(--mainColorO);
+    position: absolute;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    z-index: -1;
+    transform: rotate(-20deg);
+}
+
+.icon.bot::before {
+    right: -60%;
+    top: 27%;
+    transform: rotate(-20deg);
+}
+
+.icon.tawg::before {
+    right: -45%;
+    top: 27%;
+    transform: rotate(5deg);
+}
+
+/* About us section */
+.about {
+    padding: 3rem 0;
+    text-align: center;
+    background-size: cover;
+    background-image: url('../assets/who-us.png');
+    width: 100%;
+    height: 100%
+}
+
+.about .row {
+    width: 100%
+}
+
+.about p { margin: 10px 0 }
+
+.about h4 {
+    position: relative;
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+    font-weight: 600;
+    color: var(--mainColorB)
+}
+.about h4::before {
+    content: '';
+    bottom: -10px;
+    right: 25%;
+    width: 50%;
+    height: 3px;
+    background-color: var(--mainColorB);
+    position: absolute;
+}
+.about h6, .about p{
+    width: 100%
+}
+
+/* Contact us */
+.contact .cover {
+    background-image: url('../assets/landing.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: right;
+}
+
+.contact .overlay { padding: 40px 20px }
+
+.contact h4 {
+    color: var(--mainColorB);
+    font-weight: 600;
+    position: relative;
+    display: block;
+    width: fit-content;
+    margin: 10px 0 20px auto;
+}
+
+.contact h4::before {
+    position: absolute;
+    content: '';
+    bottom: -10px;
+    right: 0;
+    width: 50%;
+    height: 3px;
+    background-color: var(--mainColorB);
+}
+
+form.form-inline { direction: rtl }
+
+.contact form input {
+    margin: 1rem 0;
+}
+
+.contact .mx-sm-3.mb-0 {
+    margin: 0 0 0 20px !important;
+}
+
+.contact input {
+    width: 40%;
+    height: 45px;
+
+}
+
+.contact form input, .contact button.btn.btn-primary.mb-0{ min-width: 220px;
+margin-bottom: 0; margin-top: 0 }
+
+.contact button.btn.btn-primary.mb-0{
+    background-color: var(--mainColorB);
+    border: 0;
+    height: 45px;
+    padding: 0;
+    margin: 1rem 0 !important;
+}
