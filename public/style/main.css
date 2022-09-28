@@ -287,3 +287,10 @@ a.carousel-control-next {
     margin-top: 15px;
     
 }
+
+/* Slider section */
+.slick-center {
+    color: red !important;
+}
+
+/* .center { color: var(--mainColorO) } */
