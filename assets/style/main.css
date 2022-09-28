@@ -126,16 +126,12 @@ a.carousel-control-next {
 
 .landingImg, .slideII {
     background-image: url(../imgs/landing.jpg);
-    height: calc(100vh - 60px);
+    height: calc(100vh + 7px);
     background-size: cover;
 }
 
 .slideII {
     background: #012169
-}
-
-.slideIII {
-    background: #041E42;
 }
 
 .overlay {
@@ -347,12 +343,17 @@ button.slick-prev.slick-arrow {
 
 .center div { background-size: cover }
 
-.center .a, .center .b, .center .c, .center .d, .center .e, .center .f {
-    background-image: url(../imgs/landing.jpg);
+.center .a, .center .b, .center .c, .center .d {
+    /* background-image: url(../imgs/landing.jpg); */
     height: 400px;
     width: 400px;
     margin: 0 10px
 }
+
+.center .a { background-image: url('../imgs/sliderI.jpg') }
+.center .b { background-image: url('../imgs/sliderII.jpg') }
+.center .c { background-image: url('../imgs/sliderIII.jpg') }
+.center .d { background-image: url('../imgs/sliderIIII.jpg') }
 .slick-center {
     height: 450px !important;
     /* margin: 0 10px; */
@@ -593,7 +594,7 @@ button.slick-next.slick-arrow::before {
 
 /* Contact us */
 .contact .cover {
-    background-image: url('../imgs/landing.jpg');
+    background-image: url('../imgs/sliderI.jpg');
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -629,11 +630,11 @@ button.slick-next.slick-arrow::before {
 form.form-inline { direction: rtl }
 
 .contact form input {
-    margin: 1rem 0;
+    margin: 1rem 5px;
 }
 
 .contact .mx-sm-3.mb-0 {
-    margin: 0 0 0 20px !important;
+    margin: 0 0 7px 20px !important;
 }
 
 .contact input {
