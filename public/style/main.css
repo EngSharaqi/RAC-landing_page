@@ -9,9 +9,7 @@
     color: #fff
 }
 
-* {
-    transition: .25s all ease-in-out
-}
+* { transition: .25s all ease-in-out }
 
 html, body {
     margin: 0;
@@ -33,6 +31,13 @@ nav.navbar {
     z-index: 9999;
 }
 
+nav button.navbar-toggler { border-color: #fff !important }
+
+nav i.fas.fa-bars {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
 .navbar-light .navbar-brand {
     color: rgba(0,0,0,.9);
     padding: 15px 15px 25px;
@@ -41,9 +46,7 @@ nav.navbar {
     margin-right: 0;
 }
 
-nav.navbar a.navbar-brand img {
-    width: 70px;
-}
+nav.navbar a.navbar-brand img { width: 70px }
 
 nav.navbar ul li.nav-item {
     padding-left: 0;
@@ -199,7 +202,7 @@ a.carousel-control-next {
     flex-direction: row-reverse;
 }
 
-.adv .advIcon img { width: 40px }
+.adv .advIcon img { width: 40% }
 
 .adv .advIcon {
     background-color: #ebebeb;
@@ -351,7 +354,6 @@ button.slick-prev.slick-arrow {
     margin: 0 10px
 }
 .slick-center {
-    width: 450px !important;
     height: 450px !important;
     /* margin: 0 10px; */
 }
@@ -451,6 +453,7 @@ button.slick-next.slick-arrow::before {
     color: #fff;
     text-align: center;
     line-height: 1.7;
+    padding: 0 40px;
 }
 
 .testemonials h5 { font-weight: 600 }
@@ -657,6 +660,7 @@ margin-bottom: 0; margin-top: 0 }
 }
 
 .scrollToTop i {
+    cursor: pointer;
     position: fixed;
     left: 20px;
     bottom: 20px;
@@ -743,9 +747,177 @@ footer h6 {
     /* landing */
     .landing .carousel-inner { overflow: hidden }
     .landing .sideImg { display: none }
-    
+    .landing .info { text-align: center }
+    .carousel-control-prev, .carousel-control-next { z-index: 9999 !important; display: none }
+    .landing .info h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .landing .info { margin-top: calc((100vh - -200px) / 4) }
+    .landing .info button.btn { font-size: .9rem }
+
+    /* vision and value */
+    .vision img {
+        margin-right: auto;
+        margin-left: auto
+    }
+    .vision, .vision h4 { text-align: center }
+    .vision h4, .vision button { margin-right: auto; margin-left: auto }
+    .vision h6 { margin: 30px 0 15px }
+    .vision h4::before { right: 25% }
+
+    /* Structure org section */
+    .structure { background-image: unset }
+    .structure::before { width: 0; height: 0 }
+    .structure .container > .row { flex-direction: column-reverse }
+    .structure h4 { margin-bottom: 20px }
+    .structure .icon::before { display: none }
+    .structure .bot { margin-top: 0 }
+    .structure .icon.bot span { top: 0 }
+    .structure small {
+        margin-bottom: 3rem;
+        display: block
+    }
+    .structure .icon {
+        width: 150px;
+        height: 150px;
+    }
+    .structure .icon .span { right: 30% }
+
+    /* contact */
+    .contact h6, .contact h4, .contact p {
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .contact h4 { margin-top: 10px }
+    .contact h4::before { right: 25% }
+    .contact form { width: 100%; justify-content: center }
+    .contact .mx-sm-3.mb-0 {
+        margin: 0 !important;
+    }
+
+    .contact form input, .contact button.btn.btn-primary.mb-0 {
+        min-width: 85vw;
+        margin: 10px auto 0 !important;
+        display: block;
+    }
+
+    .contact iframe { height: 400px }
+
+    /* footer */
+    /* footer h4 { text-align: center }
+    footer ul {
+        width: fit-content;
+        margin: auto;
+    } */
+
+    footer .col-xs-5, footer .col-xs-7 { padding: 0 2px }
+    footer .col-xs-5 {
+        width: calc((100% / 12) * 5)
+    }
+    footer .col-xs-7 {
+        width: calc((100% / 12) * 7)
+    }
+    footer ul.social {
+        display: flex;
+        justify-content: space-between;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+    footer .socialF {
+        order: -1;
+        margin: 0 0 30px;
+    }
+    footer .socialF h4 { display: none }
+    .noSmall { display: none }
+    footer h4 { font-size: 1rem; font-weight: bold; margin-bottom: 3px }
+    footer a { font-size: .8rem }
+    .sections li {
+        padding: 2px;
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: 5px;
+    }
+    ul li i {
+        height: 28px;
+        margin-bottom: 0px;
+    }
+    ul.social li i {
+        height: 35px;
+        padding: 12px;
+    }
+    ul.social li i:hover { background: var(--mainColorO) }
 }
 
 @media(max-width: 991px) {
+    nav.navbar { z-index: 9999999 }
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light.custNav {
+        background-color: var(--mainColorB) !important;
+        padding-bottom: 1rem;
+    }
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light div#navbarNav { text-align: right }
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light.custNav ul.navbar-nav {
+        padding-right: 15px;
+        margin-top: 25px;
+    }
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light.custNav a.nav-link {
+        width: fit-content;
+        display: block;
+    }
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light button.navbar-toggler {
+        border-color: #fff !important;
+    }
+}
 
+@media(max-width: 650px){
+    .testemonials p {
+        width: 75%;
+        margin: auto;
+    }
+}
+
+@media(max-width: 345px){
+    footer .col-xs-5, footer .col-xs-7 {
+        width: 100%
+    }
+    footer ul li, footer h4 { text-align: center }
+}
+
+@media(max-width: 991px){
+    button.slick-prev.slick-arrow {
+        left: 0%;
+        transform: rotate(180deg);
+    }
+
+    button.slick-next.slick-arrow {
+        right : 0%;;
+        transform: rotate(180deg)
+    }
+
+    button.slick-prev.slick-arrow::before {
+        left: 66%;
+        transform: rotate(135deg);
+    }
+    button.slick-next.slick-arrow::before {
+        right: unset;
+        left: 10px;
+        transform: rotate(135deg);
+    }
+}
+
+@media(min-width: 992px) and (max-width: 1333px) {
+    button.slick-prev.slick-arrow {
+        left: 29%
+    }
+    button.slick-next.slick-arrow {
+        right: 29%
+    }
+}
+
+@media(min-width: 676px) and (max-width: 1199px){
+    .icon.bot::before {
+        right: -72%;
+        transform: rotate(-23deg);
+    }
 }
