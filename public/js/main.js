@@ -23,3 +23,18 @@ $('.center').slick({
         }
     ]
 });
+
+// scroll to top 
+function scrollFunction() {
+  if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+    scrollF.style.display = "block";
+  } else {
+    scrollF.style.display = "none";
+  }
+}
+
+let scrollToTop = () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+let scrollF = document.getElementsByClassName('scrollToTop')[0];
