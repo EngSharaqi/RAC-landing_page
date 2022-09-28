@@ -159,17 +159,17 @@ a.carousel-control-next {
 
 .info small { display: block }
 
-.landing .info button.btn {
+.landing .info button.btn, .vision .button {
     padding: 12px 48px;
     border-radius: 10px;
     box-shadow: 0 0 6px 2px #00000069;
 }
 
-.landing .info button:hover {
+.landing .info button:hover, .vision .button:hover {
     background-color: #00003a !important
 }
 
-.landing .info button a {
+.landing .info button a, .vision .button a {
     color: #fff;
     text-decoration: none
 }
@@ -230,3 +230,60 @@ a.carousel-control-next {
 }
 
 .adv h6 a { text-decoration: underline; color: var(--mainColorB) }
+
+/* Vision and value section */
+.vision {
+    background-image: url(../assets/hexaPattern.jpg);
+    background-size: cover;
+    text-align: right;
+    padding: 3rem 0;
+}
+
+.vision .cust {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.vision img {
+    width: 250px;
+    margin-right: auto;
+    display: block;
+}
+
+.vision h4 {
+    color: var(--mainColorB);
+    font-weight: 600;
+    display: block;
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+    margin-bottom: 0;
+}
+
+.vision h6 {
+    margin-bottom: 10px
+}
+
+.vision h4::before {
+    content: '';
+    width: 46%;
+    height: 3px;
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    background-color: var(--mainColorB);
+}
+
+.vision small {
+    margin-top: 20px
+}
+.vision .button {
+    background-color: var(--mainColorB);
+    width: unset;
+    max-width: 232px;
+    width: auto !important;
+    display: block;
+    margin-left: auto;
+    margin-top: 15px;
+    
+}
