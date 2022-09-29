@@ -165,7 +165,7 @@ a.carousel-control-next {
     box-shadow: 0 0 6px 2px #00000069;
 }
 
-.landing .info :hover, .vision .button:hover {
+.landing .info button:hover, .vision .button:hover {
     background-color: #00003a !important
 }
 
