@@ -159,17 +159,17 @@ a.carousel-control-next {
 
 .info small { display: block }
 
-.landing .info button.btn, .vision .button {
+.landing .info a.btn, .vision .button {
     padding: 12px 48px;
     border-radius: 10px;
     box-shadow: 0 0 6px 2px #00000069;
 }
 
-.landing .info button:hover, .vision .button:hover {
+.landing .info a:hover, .vision .button:hover {
     background-color: #00003a !important
 }
 
-.landing .info button a, .vision .button a {
+.landing .info a a, .vision .button a {
     color: #fff;
     text-decoration: none
 }
@@ -755,7 +755,7 @@ footer h6 {
         font-weight: bold;
     }
     .landing .info { margin-top: calc((100vh - -200px) / 4) }
-    .landing .info button.btn { font-size: .9rem }
+    .landing .info a.btn { font-size: .9rem }
 
     /* vision and value */
     .vision img {
