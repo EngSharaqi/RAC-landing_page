@@ -754,8 +754,11 @@ footer h6 {
         font-size: 1.5rem;
         font-weight: bold;
     }
-    .landing .info { margin-top: calc((100vh - -200px) / 4) }
-    .landing .info .btn { font-size: .9rem }
+    .landing .info { margin-top: calc((100vh - 112px + 50px) / 2) }
+    .landing h5 {
+        margin: 20px 0
+    }
+    .landing .info .btn { font-size: .9rem; margin-top: 30px }
 
     /* vision and value */
     .vision img {
@@ -805,13 +808,6 @@ footer h6 {
     }
 
     .contact iframe { height: 400px }
-
-    /* footer */
-    /* footer h4 { text-align: center }
-    footer ul {
-        width: fit-content;
-        margin: auto;
-    } */
 
     footer .col-xs-5, footer .col-xs-7 { padding: 0 2px }
     footer .col-xs-5 {
